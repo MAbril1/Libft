@@ -22,7 +22,7 @@ static int	ft_strlen(char *str)
 	return (i);
 }
 
-size_t		strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t		strlcat(char *dst, const char *src, size_t dstsize)
 {
 	char		*d;
 	const char	*s;
@@ -32,7 +32,7 @@ size_t		strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	*d = dst;
 	*s = src;
 	size = dstsize;
-	while (n+-- != 0 && *d)
+	while (n-- != 0 && *d)
 		d++;
 	dlen = d - dst;
 	n = dstsize - dlen;
