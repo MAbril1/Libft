@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/24 17:49:07 by mabril            #+#    #+#             */
-/*   Updated: 2018/04/27 13:25:52 by mabril           ###   ########.fr       */
+/*   Created: 2018/04/27 14:12:24 by mabril            #+#    #+#             */
+/*   Updated: 2018/04/27 14:12:27 by mabril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int i;
+	int			len;
+	char const	*r;
 
-	i = -1;
-	if (s == NULL || f == NULL)
-		return ;
-	while (s[++i] != '\0')
-		(*f)(s[i]);
+	len = ft_strlen(*s1) + ft_strlen(*s2);
+	r = (char *)malloc((len + 1) * sizeof(*r));
+	while (*s1)
+	{
+		*r = *s1;
+		r++;
+		s1++;
+	}
+	while (*s2)
+	{
+		*r = *s2;
+		r++;
+		s2++;
+	}
+	*r = '\0';
+	return (r);
 }

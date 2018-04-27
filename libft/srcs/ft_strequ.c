@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/24 17:49:07 by mabril            #+#    #+#             */
-/*   Updated: 2018/04/27 13:25:52 by mabril           ###   ########.fr       */
+/*   Created: 2018/04/27 13:56:53 by mabril            #+#    #+#             */
+/*   Updated: 2018/04/27 13:56:55 by mabril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+int		ft_strequ(char const *s1, char const *s2)
 {
-	int i;
-
-	i = -1;
-	if (s == NULL || f == NULL)
-		return ;
-	while (s[++i] != '\0')
-		(*f)(s[i]);
+	if (!s1 || !s2)
+		return (0);
+	while (*s1 && *s2)
+	{
+		if (*s1 != *s2)
+			return (0);
+		s1++;
+		s2++;
+	}
+	return (1);
 }
