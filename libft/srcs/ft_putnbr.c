@@ -10,4 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+void		ft_putnbr(int n)
+{
+	if (nb > 2147483647 || nb <= -2147483648)
+		return ;
+	if (nb < 0)
+		ft_putchar('-');
+	if (nb < 0)
+		nb *= -1;
+	if (nb < 10)
+	{
+		ft_putchar(nb + '0');
+		return ;
+	}
+	ft_putnbr(nb / 10);
+	ft_putchar((nb % 10) + '0');
+	return ;
+}

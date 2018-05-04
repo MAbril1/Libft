@@ -33,13 +33,13 @@ static char	*conversion(int n, char *r)
 		*dst++ = '-';
 	}
 	else if (n / 10 != 0)
-		dst = conversion(n / 10, dst)
+		dst = conversion(n / 10, dst);
 	*dst++ = (n % 10) + '0';
 	*dst = '\0';
 	return (dst);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*r;
 
