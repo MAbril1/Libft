@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/16 13:17:13 by mabril            #+#    #+#             */
-/*   Updated: 2018/04/16 13:17:54 by mabril           ###   ########.fr       */
+/*   Created: 2018/05/04 16:14:15 by mabril            #+#    #+#             */
+/*   Updated: 2018/05/04 16:14:18 by mabril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <unistd.h>
-# include <string.h>
-# include <stdlib.h>
+#include "libft.h"
 
-typedef struct		s_list
+void	*memmove(void *dst, const void *src, size_t len)
 {
-	void			*content;
-	size_t			content_size;
-	struct			s_list *next;
-}					t_list;
+	char	*d;
+	char	*s;
+	size_t	i;
 
-void	ft_putchar(char c);
-void	*ft_memset(void *str, int c, size_t len);
-
-#endif
+	d = (char *)dst;
+	s = (char *)src;
+	i = 0;
+	if (s < d)
+	{
+		while (i++ < len)
+			d[i] = s[i];
+	}
+	else
+		ft_memcpy(d, s, i);
+	return (d);
+}
