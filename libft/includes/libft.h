@@ -16,6 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 
+void	ft_putchar(char c);
 void	*ft_memset(void *str, int c, size_t len);
 
 #endif
