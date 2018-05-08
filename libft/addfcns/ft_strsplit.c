@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int			strcount(char const *str, char c)
+static int	strcount(char const *str, char c)
 {
 	int i;
 	int count;
