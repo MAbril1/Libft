@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/17 15:07:32 by mabril            #+#    #+#             */
-/*   Updated: 2018/04/17 15:07:34 by mabril           ###   ########.fr       */
+/*   Created: 2018/05/04 16:14:15 by mabril            #+#    #+#             */
+/*   Updated: 2018/05/04 16:14:18 by mabril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *restrict dst, char *restrict src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int i;
-	int j;
+	char	*d;
+	char	*s;
+	size_t	i;
 
+	d = (char *)dst;
+	s = (char *)src;
 	i = 0;
-	j = 0;
-	while (dst[i] != '\0')
-		i++;
-	while (src[j] != '\0' && j * sizeof(int) < n)
+	if (s < d)
 	{
-		dst[i] = src[j];
-		i++;
-		j++;
+		while (i++ < len)
+			d[i] = s[i];
 	}
-	dst[i] = '\0';
-	return (dst);
+	else
+		ft_memcpy(d, s, i);
+	return (d);
 }

@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabril <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/27 13:37:41 by mabril            #+#    #+#             */
-/*   Updated: 2018/04/27 13:37:43 by mabril           ###   ########.fr       */
+/*   Created: 2018/04/17 15:07:32 by mabril            #+#    #+#             */
+/*   Updated: 2018/04/17 15:07:34 by mabril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strncat(char *restrict dst, char *restrict src, size_t n)
 {
-	char	*r;
-	int		i;
+	int i;
+	int j;
 
-	if (s == NULL || f == NULL)
-		return (NULL);
-	r = (char *)malloc((ft_strlen(s) + 1) * sizeof(*r));
-	if (r)
+	i = 0;
+	j = 0;
+	while (dst[i] != '\0')
+		i++;
+	while (src[j] != '\0' && j * sizeof(int) < n)
 	{
-		i = -1;
-		while (s[++i])
-			r[i] = f(i, s[i]);
-		r[i] = '\0';
+		dst[i] = src[j];
+		i++;
+		j++;
 	}
-	return (r);
+	dst[i] = '\0';
+	return (dst);
 }
