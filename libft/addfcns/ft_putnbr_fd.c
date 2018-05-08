@@ -14,18 +14,18 @@
 
 void		ft_putnbr_fd(int n, int fd)
 {
-	if (nb > 2147483647 || nb <= -2147483648)
+	if (n > 2147483647 || n <= -2147483648)
 		return ;
-	if (nb < 0)
+	if (n < 0)
 		ft_putchar_fd('-', fd);
-	if (nb < 0)
-		nb *= -1;
-	if (nb < 10)
+	if (n < 0)
+		n *= -1;
+	if (n < 10)
 	{
-		ft_putchar_fd(nb + '0', fd);
+		ft_putchar_fd(n + '0', fd);
 		return ;
 	}
-	ft_putnbr_fd(nb / 10, fd);
-	ft_putchar_fd((nb % 10) + '0', fd);
+	ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd((n % 10) + '0', fd);
 	return ;
 }

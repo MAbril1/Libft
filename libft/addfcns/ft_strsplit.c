@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	strcount(char const *str, char c)
+static int	strcount(const char *str, char c)
 {
 	int i;
 	int count;
@@ -38,7 +38,7 @@ static int	strcount(char const *str, char c)
 	return (count);
 }
 
-static int	charcount(char const *s, char c, int i)
+static int	charcount(const char *s, char c, int i)
 {
 	int count;
 
@@ -48,9 +48,10 @@ static int	charcount(char const *s, char c, int i)
 		count++;
 		i++;
 	}
+	return (count);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(const char *s, char c)
 {
 	char	**r;
 	int		i;
@@ -64,17 +65,17 @@ char		**ft_strsplit(char const *s, char c)
 			i++;
 		else if (s[i] != c)
 		{
-			k = 0;
 			*r = (char *)malloc((charcount(s, c, i) + 1) * sizeof(*r));
-			while (s[i++] != c)
+			while (s[i] != c && s[i] != '\0')
 			{
-				*r = s[i];
-				r++;
+				**r = s[i];
+				(*r)++;
+				i++;
 			}
-			*r = '\0';
-			*r++;
+			**r = '\0';
+			(*r)++;
 		}
 	}
-	**r = NULL;
-	return (**r);
+	*r = NULL;
+	return (r);
 }

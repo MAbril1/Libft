@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strcat(char *restrict dst, char *restrict src)
+char	*ft_strcat(char *dst, char *src)
 {
 	int i;
 	int j;

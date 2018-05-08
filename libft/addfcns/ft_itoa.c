@@ -44,5 +44,5 @@ char		*ft_itoa(int n)
 	char	*r;
 
 	r = (char *)malloc((get_strlen(n) + 1) * sizeof(*r));
-	return (conversion(n, *r));
+	return (conversion(n, r));
 }

@@ -11,17 +11,20 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char		*ft_strdup(const char *s1)
 {
-	int			i;
-	const char	*copy;
+	int		i;
+	char	*copy;
 
-	copy = (char*)malloc((ft_strlen(s1) + 1) * sizeof(*copy));
+	if (!(copy = (char*)malloc((ft_strlen(s1) + 1) * sizeof(*copy))))
+		return (NULL);
 	i = 0;
 	while (s1[i] != '\0')
 	{
 		copy[i] = s1[i];
 		i++;
 	}
+	return (copy);
 }

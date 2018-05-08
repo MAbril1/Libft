@@ -31,7 +31,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 				k++;
 			}
 			if (needle == '\0')
-				return (&haystack[i]);
+				return ((char *)haystack + i);
 		}
 		i++;
 	}

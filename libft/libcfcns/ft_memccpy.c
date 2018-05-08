@@ -16,10 +16,10 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	int			i;
 	char		*d;
-	const char	*sc;
+	const char	*s;
 
-	d = *dst;
-	s = *src;
+	d = (char *)dst;
+	s = (const char *)src;
 	i = -1;
 	while (++i < (int)n)
 	{

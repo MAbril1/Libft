@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	trimlen(char *str, int start, int end)
+static int	trimlen(int start, int end)
 {
 	int i;
 
@@ -54,7 +54,7 @@ char		*ft_strtrim(char const *s)
 			end = i;
 		i++;
 	}
-	r = (char *)malloc((trimlen(s) + 1) * sizeof(*r));
-	cpy(*r, *s, start, end);
+	r = (char *)malloc((trimlen(start, end) + 1) * sizeof(*r));
+	cpy(r, s, start, end);
 	return (r);
 }

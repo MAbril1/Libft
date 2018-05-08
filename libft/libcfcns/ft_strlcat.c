@@ -16,12 +16,12 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	char		*d;
 	const char	*s;
-	size_t		size;
+	size_t		n;
 	size_t		dlen;
 
-	*d = dst;
-	*s = src;
-	size = dstsize;
+	d = dst;
+	s = src;
+	n = dstsize;
 	while (n-- != 0 && *d)
 		d++;
 	dlen = d - dst;
