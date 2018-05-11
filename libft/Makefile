@@ -66,12 +66,13 @@ FILES = libcfcns/ft_atoi.c \
 			addfcns/ft_striteri.c \
 			addfcns/ft_strnequ.c \
 			addfcns/ft_strtrim.c \
+			personalfcns/ft_isspace.c
 #			bonusfcns/ft_lstadd.c \
 #			bonusfcns/ft_lstdel.c \
 #			bonusfcns/ft_lstdelone.c \
 #			bonusfcns/ft_lstiter.c \
 #			bonusfcns/ft_lstmap.c \
-#			bonusfcns/ft_lstnew.c
+#			bonusfcns/ft_lstnew.c \
 
 OBJ = ft_atoi.o \
 			ft_isascii.o \
@@ -125,12 +126,13 @@ OBJ = ft_atoi.o \
 			ft_striteri.o \
 			ft_strnequ.o \
 			ft_strtrim.o \
+			ft_isspace.o
 	#		ft_lstadd.o \
 	#		ft_lstdel.o \
 	#		ft_lstdelone.o \
 	#		ft_lstiter.o \
 	#		ft_lstmap.o \
-	#		ft_lstnew.o
+	#		ft_lstnew.o 
 
 all: $(NAME)
 

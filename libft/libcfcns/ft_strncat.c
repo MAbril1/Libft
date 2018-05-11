@@ -17,16 +17,10 @@ char	*ft_strncat(char *dst, char *src, size_t n)
 	int i;
 	int j;
 
-	i = 0;
-	j = 0;
-	while (dst[i] != '\0')
-		i++;
-	while (src[j] != '\0' && j * sizeof(int) < n)
-	{
-		dst[i] = src[j];
-		i++;
-		j++;
-	}
-	dst[i] = '\0';
+	i = -1;
+	j = ft_strlen(dst);
+	while (*(src + (++i)) && i < (int)n)
+		*(dst + (j++)) = *(src + i);
+	*(dst + j) = '\0';
 	return (dst);
 }

@@ -92,4 +92,10 @@ char				*ft_strtrim(const char *s);
 **	Bonus Functions
 */
 
+/*
+**	Personal Functions
+*/
+
+int					ft_isspace(int c);
+
 #endif
