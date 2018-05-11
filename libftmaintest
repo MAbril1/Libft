@@ -1,0 +1,52 @@
+[Yellow Tests] are Hardcore
+Test [memset] : OK
+Test [bzero] : OK
+Test [memcpy] : OK
+Test [memccpy] : OK
+Test [memmove] : OK
+Test [memchr] : OK
+Test [memcmp] : OK
+Test [strlen] : OK
+Test [strdup] : OK
+Test [strcpy] : OK
+Test [strncpy] : OK
+Test [strcat] : OK
+Test [strncat] : OK
+Test [strlcat] : OK
+Test [strchr] : OK
+Test [strrchr] : OK
+Test [strstr] : OK
+Test [strnstr] : OK
+Test [strcmp] : OK
+Test [strncmp] : OK
+Test [atoi] : OK
+Test [isalpha] : OK
+Test [isdigit] : OK
+Test [isalnum] : OK
+Test [isascii] : OK
+Test [isprint] : OK
+Test [toupper] : OK
+Test [tolower] : OK
+Test [memalloc_and_del] : OK
+Test [strnew] : OK
+Test [strdel] : Segmentation Fault
+Test [strclr] : OK
+Test [striter] : OK
+Test [striteri] : OK
+Test [strmap] : OK
+Test [strmapi] : OK
+Test [strequ] : Error Line 862, Funct uf_test_strequ : 
+ft_strequ("abc", "abcd").
+Expected ret = "0" 			   but have ret = "1"
+FAIL
+Test [strnequ] : OK
+Test [strsub] : Segmentation Fault
+Test [strjoin] : Segmentation Fault
+Test [strsplit] : Segmentation Fault
+Test [itoa] : main(89926,0x7fff8d6f6340) malloc: *** error for object 0x7f88eb5001d1: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+Error Line 737, Funct uf_test_itoa : 
+ft_itoa(0).
+Expected ret = "0" 			   but have ret = ""
+The processus receive the signal 6
+Test [strtrim] : Segmentation Fault

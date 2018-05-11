@@ -1,0 +1,201 @@
+42FILECHECKER INFO:\n\nHere is the full standard output of the libft-unit-test running with your libft.\nSee also the clean logfile provided by the library at the following path:\n/nfs/2018/m/mabril/42FileChecker/libft-unit-test/result.log\n\n\n\n------------------------------------------------\n\n\n\n make re -C /nfs/2018/m/mabril/42home/libft/libft/libft 
+/bin/rm -f ft_atoi.o ft_isascii.o ft_memchr.o ft_memset.o ft_strcpy.o ft_strncat.o ft_strrchr.o ft_bzero.o ft_isdigit.o ft_memcmp.o ft_strcat.o ft_strdup.o ft_strncmp.o ft_strstr.o ft_isalnum.o ft_isprint.o ft_memcpy.o ft_strchr.o ft_strlcat.o ft_strncpy.o ft_tolower.o ft_isalpha.o ft_memccpy.o ft_memmove.o ft_strcmp.o ft_strlen.o ft_strnstr.o ft_toupper.o ft_itoa.o ft_putchar_fd.o ft_putnbr_fd.o ft_strdel.o ft_strjoin.o ft_strnew.o ft_memalloc.o ft_putendl.o ft_putstr.o ft_strequ.o ft_strmap.o ft_strsplit.o ft_memdel.o ft_putendl_fd.o ft_putstr_fd.o ft_striter.o ft_strmapi.o ft_strsub.o ft_putchar.o ft_putnbr.o ft_strclr.o ft_striteri.o ft_strnequ.o ft_strtrim.o ft_isspace.o
+/bin/rm -f libft.a
+gcc -Wall -Wextra -Werror -c -I ./includes/ libcfcns/ft_atoi.c libcfcns/ft_isascii.c libcfcns/ft_memchr.c libcfcns/ft_memset.c libcfcns/ft_strcpy.c libcfcns/ft_strncat.c libcfcns/ft_strrchr.c libcfcns/ft_bzero.c libcfcns/ft_isdigit.c libcfcns/ft_memcmp.c libcfcns/ft_strcat.c libcfcns/ft_strdup.c libcfcns/ft_strncmp.c libcfcns/ft_strstr.c libcfcns/ft_isalnum.c libcfcns/ft_isprint.c libcfcns/ft_memcpy.c libcfcns/ft_strchr.c libcfcns/ft_strlcat.c libcfcns/ft_strncpy.c libcfcns/ft_tolower.c libcfcns/ft_isalpha.c libcfcns/ft_memccpy.c libcfcns/ft_memmove.c libcfcns/ft_strcmp.c libcfcns/ft_strlen.c libcfcns/ft_strnstr.c libcfcns/ft_toupper.c addfcns/ft_itoa.c addfcns/ft_putchar_fd.c addfcns/ft_putnbr_fd.c addfcns/ft_strdel.c addfcns/ft_strjoin.c addfcns/ft_strnew.c addfcns/ft_memalloc.c addfcns/ft_putendl.c addfcns/ft_putstr.c addfcns/ft_strequ.c addfcns/ft_strmap.c addfcns/ft_strsplit.c addfcns/ft_memdel.c addfcns/ft_putendl_fd.c addfcns/ft_putstr_fd.c addfcns/ft_striter.c addfcns/ft_strmapi.c addfcns/ft_strsub.c addfcns/ft_putchar.c addfcns/ft_putnbr.c addfcns/ft_strclr.c addfcns/ft_striteri.c addfcns/ft_strnequ.c addfcns/ft_strtrim.c personalfcns/ft_isspace.c
+ar rc libft.a ft_atoi.o ft_isascii.o ft_memchr.o ft_memset.o ft_strcpy.o ft_strncat.o ft_strrchr.o ft_bzero.o ft_isdigit.o ft_memcmp.o ft_strcat.o ft_strdup.o ft_strncmp.o ft_strstr.o ft_isalnum.o ft_isprint.o ft_memcpy.o ft_strchr.o ft_strlcat.o ft_strncpy.o ft_tolower.o ft_isalpha.o ft_memccpy.o ft_memmove.o ft_strcmp.o ft_strlen.o ft_strnstr.o ft_toupper.o ft_itoa.o ft_putchar_fd.o ft_putnbr_fd.o ft_strdel.o ft_strjoin.o ft_strnew.o ft_memalloc.o ft_putendl.o ft_putstr.o ft_strequ.o ft_strmap.o ft_strsplit.o ft_memdel.o ft_putendl_fd.o ft_putstr_fd.o ft_striter.o ft_strmapi.o ft_strsub.o ft_putchar.o ft_putnbr.o ft_strclr.o ft_striteri.o ft_strnequ.o ft_strtrim.o ft_isspace.o
+ranlib libft.a
+[  Cleaning #0  ]
+âM-^^¤  rm -f obj/src/main.o obj/src/test_functions.o obj/src/display_test_result.o obj/src/signal.o obj/src/sandbox.o obj/src/bench_functions.o obj/src/additional_functions.o obj/hardcore-mode/hardcore-main.o obj/hardcore-mode/error.o obj/hardcore-mode/ncurses-display.o obj/hardcore-mode/test-init.o obj/hardcore-mode/test-utils.o obj/hardcore-mode/test-strcpy.o obj/hardcore-mode/test-strcmp.o obj/hardcore-mode/test-strncmp.o obj/hardcore-mode/test-memset.o obj/hardcore-mode/test-memcpy.o obj/hardcore-mode/test-memccpy.o obj/hardcore-mode/test-memmove.o obj/hardcore-mode/test-memchr.o obj/hardcore-mode/test-memcmp.o obj/hardcore-mode/test-strlen.o obj/hardcore-mode/test-strncpy.o obj/hardcore-mode/test-strcat.o obj/hardcore-mode/test-strncat.o obj/hardcore-mode/test-strchr.o obj/hardcore-mode/test-strrchr.o obj/hardcore-mode/test-strstr.o 
+âM-^^¤  rm -f libft.so assets/libft.a assetslibtests assets/malloc.dylib 
+âM-^^¤  rm -f run_test 
+ make -j 3 -C /nfs/2018/m/mabril/42home/libft/libft/libft 
+make[1]: Nothing to be done for `all'.
+ cp /nfs/2018/m/mabril/42home/libft/libft/libft/libft.a assets/ 
+âM-^^¤  clang -shared -fPIC assets/tmp/ft_atoi.o assets/tmp/ft_bzero.o assets/tmp/ft_isalnum.o assets/tmp/ft_isalpha.o assets/tmp/ft_isascii.o assets/tmp/ft_isdigit.o assets/tmp/ft_isprint.o assets/tmp/ft_isspace.o assets/tmp/ft_itoa.o assets/tmp/ft_memalloc.o assets/tmp/ft_memccpy.o assets/tmp/ft_memchr.o assets/tmp/ft_memcmp.o assets/tmp/ft_memcpy.o assets/tmp/ft_memdel.o assets/tmp/ft_memmove.o assets/tmp/ft_memset.o assets/tmp/ft_putchar.o assets/tmp/ft_putchar_fd.o assets/tmp/ft_putendl.o assets/tmp/ft_putendl_fd.o assets/tmp/ft_putnbr.o assets/tmp/ft_putnbr_fd.o assets/tmp/ft_putstr.o assets/tmp/ft_putstr_fd.o assets/tmp/ft_strcat.o assets/tmp/ft_strchr.o assets/tmp/ft_strclr.o assets/tmp/ft_strcmp.o assets/tmp/ft_strcpy.o assets/tmp/ft_strdel.o assets/tmp/ft_strdup.o assets/tmp/ft_strequ.o assets/tmp/ft_striter.o assets/tmp/ft_striteri.o assets/tmp/ft_strjoin.o assets/tmp/ft_strlcat.o assets/tmp/ft_strlen.o assets/tmp/ft_strmap.o assets/tmp/ft_strmapi.o assets/tmp/ft_strncat.o assets/tmp/ft_strncmp.o assets/tmp/ft_strncpy.o assets/tmp/ft_strnequ.o assets/tmp/ft_strnew.o assets/tmp/ft_strnstr.o assets/tmp/ft_strrchr.o assets/tmp/ft_strsplit.o assets/tmp/ft_strstr.o assets/tmp/ft_strsub.o assets/tmp/ft_strtrim.o assets/tmp/ft_tolower.o assets/tmp/ft_toupper.o -o libft.so 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/main.o -c src/main.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/test_functions.o -c src/test_functions.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/display_test_result.o -c src/display_test_result.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/signal.o -c src/signal.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/sandbox.o -c src/sandbox.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/bench_functions.o -c src/bench_functions.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/additional_functions.o -c src/additional_functions.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/hardcore-main.o -c hardcore-mode/hardcore-main.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/error.o -c hardcore-mode/error.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/ncurses-display.o -c hardcore-mode/ncurses-display.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-init.o -c hardcore-mode/test-init.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-utils.o -c hardcore-mode/test-utils.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strcpy.o -c hardcore-mode/test-strcpy.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strcmp.o -c hardcore-mode/test-strcmp.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strncmp.o -c hardcore-mode/test-strncmp.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-memset.o -c hardcore-mode/test-memset.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-memcpy.o -c hardcore-mode/test-memcpy.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-memccpy.o -c hardcore-mode/test-memccpy.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-memmove.o -c hardcore-mode/test-memmove.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-memchr.o -c hardcore-mode/test-memchr.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-memcmp.o -c hardcore-mode/test-memcmp.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strlen.o -c hardcore-mode/test-strlen.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strncpy.o -c hardcore-mode/test-strncpy.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strcat.o -c hardcore-mode/test-strcat.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strncat.o -c hardcore-mode/test-strncat.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strchr.o -c hardcore-mode/test-strchr.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strrchr.o -c hardcore-mode/test-strrchr.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strstr.o -c hardcore-mode/test-strstr.c 
+[  Linking #0  ]
+âM-^^¤  clang -Werror -Wall -Wextra -O2 -funroll-loops -lncurses -o assets/libtests obj/src/main.o obj/src/test_functions.o obj/src/display_test_result.o obj/src/signal.o obj/src/sandbox.o obj/src/bench_functions.o obj/src/additional_functions.o obj/hardcore-mode/hardcore-main.o obj/hardcore-mode/error.o obj/hardcore-mode/ncurses-display.o obj/hardcore-mode/test-init.o obj/hardcore-mode/test-utils.o obj/hardcore-mode/test-strcpy.o obj/hardcore-mode/test-strcmp.o obj/hardcore-mode/test-strncmp.o obj/hardcore-mode/test-memset.o obj/hardcore-mode/test-memcpy.o obj/hardcore-mode/test-memccpy.o obj/hardcore-mode/test-memmove.o obj/hardcore-mode/test-memchr.o obj/hardcore-mode/test-memcmp.o obj/hardcore-mode/test-strlen.o obj/hardcore-mode/test-strncpy.o obj/hardcore-mode/test-strcat.o obj/hardcore-mode/test-strncat.o obj/hardcore-mode/test-strchr.o obj/hardcore-mode/test-strrchr.o obj/hardcore-mode/test-strstr.o
+ clang -Werror -Wall -Wextra -dynamiclib assets/malloc.c -I ./include -o assets/malloc.dylib 
+ clang -Werror -Wall -Wextra assets/wrapper.c -I ./include -o run_test 
+RUNING TESTS:
+                      First part
+.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
+     "-.-"     "-.-"     "-.-"     "-.-"     "-.-"    
+ft_memset:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_bzero:      [OK] [OK] [OK] [OK] 
+ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memccpy:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strdup:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strncpy:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strcat:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strncat:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strlcat:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strstr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strnstr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [KO] [KO] [OK] 
+[KO]: your atoi does not work with over long max value
+[KO]: your atoi does not work with over long min value
+
+ft_isalpha:    [OK] 
+ft_isdigit:    [OK] 
+ft_isalnum:    [OK] 
+ft_isascii:    [OK] 
+ft_isprint:    [OK] 
+ft_toupper:    [OK] 
+ft_tolower:    [OK] 
+
+In this part, you can choose to protect your function or not to,
+a color code will tell you if your function is protected/not BUT stay coherent !
+[ðM-^_M-^[¡ ] --> protected
+[ðM-^_M-^R¥ ] --> not protected
+                     Second part
+ __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)
+(______)(______)(______)(______)(______)(______)(______)(___
+
+ft_memalloc:   [OK] [OK] [OK] [OK] [OK] 
+ft_memdel:     [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_strnew:     [OK] [OK] [FAILED] [OK] 
+[fail]: your strnew did not allocate the good size so the \0 test can be false
+
+ft_strdel:     [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_strclr:     [OK] [ðM-^_M-^[¡ ] 
+ft_striter:    [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_striteri:   [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strmap:     [OK] [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strmapi:    [OK] [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strequ:     [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strnequ:    [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] run_test(89477,0x7fff8d6f6340) malloc: *** error for object 0x7fe7dad024c6: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+
+ft_strsub:     [CRASH] run_test(89478,0x7fff8d6f6340) malloc: *** error for object 0x7fe7daf001e4: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+[CRASH] [OK] [FAILED] run_test(89481,0x7fff8d6f6340) malloc: *** error for object 0x7fe7daf001e4: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+[CRASH] [CRASH] [CRASH] [CRASH] [ðM-^_M-^R¥ ] 
+[crash]: your strsub does not work with valid input
+[crash]: your strsub does not work with valid input
+[fail]: your strsub did not allocate the good size so the \0 test may be false
+[crash]: your strsub does not set \0 to the end of the string
+[crash]: you did not protect your malloc
+[crash]: your strsub does not work for a whole string
+[crash]: your strsub crash cause it read too many bytes !
+
+ft_strjoin:    [FAILED] run_test(89487,0x7fff8d6f6340) malloc: *** error for object 0x7fe7dae00406: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+[CRASH] [FAILED] [CRASH] [FAILED] [ðM-^_M-^R¥ ] 
+[fail]: your strjoin does not work with basic input
+[crash]: your strjoin does not allocate the memory
+[fail]: your strjoin does not work with overlap input
+[crash]: you did not protect your malloc return
+[fail]: your strjoin does not set \0 to the end of the string
+
+ft_strtrim:    [FAILED] [FAILED] [FAILED] [TIMEOUT] [TIMEOUT] [KO] [FAILED] [CRASH] [FAILED] [ðM-^_M-^R¥ ] 
+[fail]: your strtrim does not work with basic input
+[fail]: your strtrim does not work with basic input
+[fail]: your strtrim does not work with basic input
+[timeout]: see the log file for informations
+[timeout]: see the log file for informations
+[KO]: your strtrim did not allocate the good size so the \0 test may be false
+[fail]: your strtrim does not allocate memory
+[crash]: you dont protect your malloc return
+[fail]: your strtrim does not set \0 to the end of the string
+
+ft_strsplit:   [FAILED] [OK] [FAILED] [FAILED] [OK] [OK] [OK] [OK] [OK] [ðM-^_M-^R¥ ] 
+[fail]: your strsplit does not work with basic input
+[fail]: your strsplit does not work with one word
+[fail]: your strsplit does not work with one word
+
+ft_itoa:       [FAILED] [FAILED] [FAILED] [FAILED] [FAILED] [CRASH] [KO] [KO] [CRASH] 
+[fail]: your itoa does not work with basic input
+[fail]: your itoa does not work with random number
+[fail]: your itoa does not work with max int
+[fail]: your itoa does not work with min int
+[fail]: your itoa don't set \0 at the end of the string
+[crash]: you did not protect your malloc
+[KO]: your itoa does not allocate the good size so the \0 test may be false
+[KO]: your itoa does not allocate the good size so the \0 test may be false
+[crash]: your itoa did not allocate memory for the int min value
+
+ft_putchar:    [OK] [OK] [KO] 
+[KO]: your putchar does not work with unicode
+
+ft_putstr:     [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_putendl:    [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_putnbr:     [OK] [OK] [FAILED] [OK] [FAILED] 
+[fail]: your putnbr does not work with int min
+[fail]: your putnbr allocate memory, wtf ???
+
+ft_putchar_fd: [OK] [OK] [KO] 
+[KO]: your putchar_fd does not work with unicode
+
+ft_putstr_fd:  [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_putendl_fd: [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_putnbr_fd:  [OK] [OK] [FAILED] [OK] [FAILED] 
+[fail]: your putnbr_fd does not work with int min
+[fail]: your putnbr_fd allocate memory, wtf ???
+
+See result.log for more informations !
