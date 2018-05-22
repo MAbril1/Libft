@@ -43,14 +43,12 @@ char		*ft_strtrim(char const *s)
 	int		i;
 
 	i = 0;
-	while (s[i] == '\t' || s[i] == '\n' || s[i] == '\v'
-			|| s[i] == '\f' || s[i] == '\r' || s[i] == ' ')
+	while (ft_isspace(*(s + i)))
 		i++;
 	start = i;
-	while (s[i])
+	while (*(s + i))
 	{
-		if (!(s[i] == '\t' || s[i] == '\n' || s[i] == '\v'
-			|| s[i] == '\f' || s[i] == '\r' || s[i] == ' '))
+		if (!ft_isspace(*(s + i)))
 			end = i;
 		i++;
 	}
