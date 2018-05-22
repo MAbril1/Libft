@@ -23,8 +23,8 @@ char	*ft_strsub(const char *s, unsigned int start, size_t len)
 	if (!r)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	while (i < (int)len)
 		*(r + (i++)) = *(s + (start++));
-	*r = '\0';
+	*(r + i) = '\0';
 	return (r);
 }
