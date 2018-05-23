@@ -27,10 +27,13 @@ static int	trimlen(int start, int end)
 
 static char	*cpy(char *dst, const char *src, int start, int end)
 {
-	while (src && start < end)
+	int i;
+
+	while (src[start] && start < end)
 	{
-		dst[start] = src[start];
+		dst[i] = src[start];
 		start++;
+		i++;
 	}
 	return (dst);
 }
@@ -41,18 +44,19 @@ char		*ft_strtrim(char const *s)
 	int		start;
 	int		end;
 	int		i;
+	int		j;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	while (ft_isspace(*(s + i)))
 		i++;
-	start = i;
-	while (*(s + i))
-	{
-		if (!ft_isspace(*(s + i)))
-			end = i;
-		i++;
-	}
-	r = (char *)malloc((trimlen(start, end) + 1) * sizeof(*r));
-	cpy(r, s, start, end);
+	j = ft_strlen(s);
+	while (ft_isspace(*(s + j)))
+		j--;
+	if (i == 0 || j == ft_strlen(s))
+		return ((char *)s);
+	r = (char *)malloc((trimlen(i, j) + 1) * sizeof(*r));
+	cpy(r, s, i, j);
 	return (r);
 }
