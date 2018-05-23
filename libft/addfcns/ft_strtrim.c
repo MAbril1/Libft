@@ -35,6 +35,7 @@ static char	*cpy(char *dst, const char *src, int start, int end)
 		start++;
 		i++;
 	}
+	dst[i] = '\0';
 	return (dst);
 }
 
