@@ -29,6 +29,7 @@ static char	*cpy(char *dst, const char *src, int start, int end)
 {
 	int i;
 
+	i = 0;
 	while (src[start] && start < end)
 	{
 		dst[i] = src[start];
@@ -42,8 +43,6 @@ static char	*cpy(char *dst, const char *src, int start, int end)
 char		*ft_strtrim(char const *s)
 {
 	char	*r;
-	int		start;
-	int		end;
 	int		i;
 	int		j;
 
