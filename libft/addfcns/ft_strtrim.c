@@ -29,6 +29,7 @@ static char	*cpy(char *dst, const char *src, int start, int end)
 {
 	int i;
 
+	i = 0;
 	while (src[start] && start < end)
 	{
 		dst[i] = src[start];
