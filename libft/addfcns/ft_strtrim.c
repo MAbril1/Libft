@@ -11,40 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-static int	trimlen(int start, int end)
-{
-	int i;
-
-	i = 0;
-	while (start != end)
-	{
-		i++;
-		start++;
-	}
-	return (i);
-}
-
-static char	*cpy(char *dst, const char *src, int start, int end)
-{
-	int i;
-
-	i = 0;
-	while (src[start] && start < end)
-	{
-		dst[i] = src[start];
-		start++;
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
-}
-
-char		*ft_strtrim(char const *s)
+char		*ft_strtrim(const char *s)
 {
 	char	*r;
 	int		i;
 	int		j;
+	int		k;
 
 	if (!s)
 		return (NULL);
@@ -56,7 +30,9 @@ char		*ft_strtrim(char const *s)
 		j--;
 	if (i == 0 || j == ft_strlen(s))
 		return ((char *)s);
-	r = (char *)malloc((trimlen(i, j) + 1) * sizeof(*r));
-	cpy(r, s, i, j);
+	r = (char *)malloc(((j - i) + 1) * sizeof(*r));
+	k = -1;
+	while (i < j)
+		*(r + (++k)) =*(s + (i++)); 
 	return (r);
 }

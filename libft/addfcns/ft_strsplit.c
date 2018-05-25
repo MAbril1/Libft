@@ -11,71 +11,47 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-static int	strcount(const char *str, char c)
+int			wordlen(const char *s, char c, int j)
 {
-	int i;
-	int count;
-	int nextword;
+	int	len;
 
-	i = 0;
-	count = 0;
-	nextword = 1;
-	if (!str)
-		return (0);
-	while (str[i])
+	len = 0;
+	while (*(s + j) == c)
+		j++;
+	while (*(s + j) != c && *(s + j) != '\0')
 	{
-		if (str[i] == c)
-			nextword = 1;
-		else
-		{
-			if (nextword == 1)
-				count++;
-			nextword = 0;
-		}
-		i++;
+		len++;
+		j++;
 	}
-	return (count);
-}
-
-static int	charcount(const char *s, char c, int i)
-{
-	int count;
-
-	count = 0;
-	while (*s && s[i] != c)
-	{
-		count++;
-		i++;
-	}
-	return (count);
+	return (len);
 }
 
 char		**ft_strsplit(const char *s, char c)
 {
-	char	**r;
 	int		i;
+	int		j;
+	int		k;
+	char	**r;
 
-	i = -1;
-	if ((r = malloc(sizeof(char*) * (strcount(s, c) + 1))) == NULL)
+	r = (char**)malloc(sizeof(*r) * (ft_wordcount(s, c) + 1));
+	if(!s || !r)
 		return (NULL);
-	while (s[++i])
+	i = -1;
+	j = 0;
+	while (++i < ft_wordcount(s, c))
 	{
-		if (s[i] == c)
-			i++;
-		else if (s[i] != c)
-		{
-			*r = (char *)malloc((charcount(s, c, i) + 1) * sizeof(*r));
-			while (s[i] != c && s[i] != '\0')
-			{
-				**r = s[i];
-				(*r)++;
-				i++;
-			}
-			**r = '\0';
-			(*r)++;
-		}
+		k = 0;
+		r[i] = ft_strnew(wordlen(s, c, j) + 1)
+		if (!r[i])
+			r[i] = NULL;
+		while (*(s + j) == c)
+			j++;
+		while (*(s + j) != c && *(s + j))
+			*(r[i] + (k++)) = *(s + j);
+		*(r[i] + k) = '\0';
 	}
-	*r = NULL;
+	r[i] = 0;
 	return (r);
 }

@@ -22,27 +22,26 @@ static int	get_strlen(int n)
 	return (i);
 }
 
-static char	*conversion(int n, char *r)
-{
-	char *dst;
-
-	dst = r;
-	if (n < 0)
-	{
-		n *= -1;
-		*dst++ = '-';
-	}
-	else if (n / 10 != 0)
-		dst = conversion(n / 10, dst);
-	*dst++ = (n % 10) + '0';
-	*dst = '\0';
-	return (dst);
-}
-
 char		*ft_itoa(int n)
 {
 	char	*r;
+	int		strlen;
+	int		sign;
 
-	r = (char *)malloc((get_strlen(n) + 1) * sizeof(*r));
-	return (conversion(n, r));
+	strlen = get_strlen(n);
+	sign = 1;	
+	if (n < 0)
+	{
+		sign = -1;
+		strlen++;
+	}
+	r = ft_strnew(strlen)
+	if (!r)
+		return (NULL);
+	*(r + (--strlen)) = n % 10 + '0';
+	while (n /= 10)
+		*(r + (--strlen)) = n % 10 + '0';
+	if (sign == -1)
+		*(r + 0) = '-';
+	return (r);
 }
