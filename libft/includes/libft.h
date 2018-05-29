@@ -97,5 +97,6 @@ char				*ft_strtrim(const char *s);
 */
 
 int					ft_isspace(int c);
+int					ft_wordcount(char const *s, char c);
 
 #endif

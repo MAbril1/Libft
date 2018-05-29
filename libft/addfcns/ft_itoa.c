@@ -35,7 +35,7 @@ char		*ft_itoa(int n)
 		sign = -1;
 		strlen++;
 	}
-	r = ft_strnew(strlen)
+	r = ft_strnew(strlen);
 	if (!r)
 		return (NULL);
 	*(r + (--strlen)) = n % 10 + '0';

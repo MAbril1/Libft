@@ -43,7 +43,7 @@ char		**ft_strsplit(const char *s, char c)
 	while (++i < ft_wordcount(s, c))
 	{
 		k = 0;
-		r[i] = ft_strnew(wordlen(s, c, j) + 1)
+		r[i] = ft_strnew(wordlen(s, c, j) + 1);
 		if (!r[i])
 			r[i] = NULL;
 		while (*(s + j) == c)
