@@ -19,14 +19,14 @@ int			ft_wordcount(char const *s, char c)
 
 	i = 0;
 	count = 0;
+	if (!s)
+		return (0);
 	while (*(s + i))
 	{
-		while (*(s + i) == c)
-			i++;
-		if (*(s + i) != c && *(s + i) != '\0')
-			count++;
-		while (*(s + i) != c && *(s + i) != '\0')
-			i++;
+		if (*(s + i) == c && *(s + i + 1) != c)
+		i++;
 	}
+	if (*(s + 0) != '\0')
+		count++;
 	return (count);
 }
