@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-int			wordlen(const char *s, char c, int j)
+static int	wordlen(const char *s, char c, int j)
 {
 	int	len;
 
@@ -36,7 +36,7 @@ char		**ft_strsplit(const char *s, char c)
 	char	**r;
 
 	r = (char**)malloc(sizeof(*r) * (ft_wordcount(s, c) + 1));
-	if(!s || !r)
+	if (!s || !r)
 		return (NULL);
 	i = -1;
 	j = 0;

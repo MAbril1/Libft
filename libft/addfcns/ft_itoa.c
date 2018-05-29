@@ -29,7 +29,7 @@ char		*ft_itoa(int n)
 	int		sign;
 
 	strlen = get_strlen(n);
-	sign = 1;	
+	sign = 1;
 	if (n < 0)
 	{
 		sign = -1;

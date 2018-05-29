@@ -66,7 +66,8 @@ FILES = libcfcns/ft_atoi.c \
 			addfcns/ft_striteri.c \
 			addfcns/ft_strnequ.c \
 			addfcns/ft_strtrim.c \
-			personalfcns/ft_isspace.c
+			personalfcns/ft_isspace.c \
+			personalfcns/ft_wordcount.c
 #			bonusfcns/ft_lstadd.c \
 #			bonusfcns/ft_lstdel.c \
 #			bonusfcns/ft_lstdelone.c \
@@ -126,7 +127,8 @@ OBJ = ft_atoi.o \
 			ft_striteri.o \
 			ft_strnequ.o \
 			ft_strtrim.o \
-			ft_isspace.o
+			ft_isspace.o \
+			ft_wordcount.o
 	#		ft_lstadd.o \
 	#		ft_lstdel.o \
 	#		ft_lstdelone.o \
